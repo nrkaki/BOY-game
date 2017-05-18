@@ -13,7 +13,7 @@ import java.util.Random;
 import java.applet.Applet;
 import java.awt.*;
 
-public class Game extends JApplet implements Runnable, KeyListener
+public class Game extends JApplet //implements Runnable//, KeyListener
 {
     //basic variables
     private final int APPLET_WIDTH = 1200;
@@ -23,7 +23,7 @@ public class Game extends JApplet implements Runnable, KeyListener
     
     //Achievement boys
     //english
-    private Achievement psat;
+    /*private Achievement psat;
     private Achievement teacher;
     private Achievement sports;
     //math
@@ -41,7 +41,7 @@ public class Game extends JApplet implements Runnable, KeyListener
     //computer science
     private Achievement sat;
     private Achievement gpa;
-    private Achievement essay;
+    private Achievement essay;*/
     
     //college boys
     
@@ -49,7 +49,7 @@ public class Game extends JApplet implements Runnable, KeyListener
     //girl
     
     
-
+    private Hallway myHallway;
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
@@ -59,7 +59,7 @@ public class Game extends JApplet implements Runnable, KeyListener
     {
         //Achievement boys
         //english
-        psat = new Achievement(
+        /*psat = new Achievement(
         teacher = new Achievement(
         sports = new Achievement(
         //math
@@ -77,7 +77,7 @@ public class Game extends JApplet implements Runnable, KeyListener
         //computer science
         sat = new Achievement(
         gpa = new Achievement(
-        essay = new Achievement(
+        essay = new Achievement(*/
         
         //college boys
         
@@ -86,7 +86,7 @@ public class Game extends JApplet implements Runnable, KeyListener
         
         
         //background
-        
+        myHallway = new Hallway("graphics/maplestoryschool.png", 0, 0);
         setSize(APPLET_WIDTH, APPLET_HEIGHT);
     }
 
@@ -114,8 +114,8 @@ public class Game extends JApplet implements Runnable, KeyListener
     public void start()
     {
         //sets up the Thread
-        Thread thread = new Thread(this);
-        thread.start(); // this calls the run method
+        //Thread thread = new Thread(this);
+        //thread.start(); // this calls the run method
     }
 
     /** 
